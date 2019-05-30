@@ -1,0 +1,13 @@
+doctype html
+html
+    head
+        title qrcod
+        meta(charset='utf-8')
+    body
+        form(action='/checkcode', method='post')
+            img(src=src)
+            label Введите код
+            br
+            input(type='text', name='token')
+            br
+            input(type='submit', value='Отправить')
