@@ -18,8 +18,8 @@ app.get('/', (req, res) => {
 });
 
 app.post('/checkcode', (req, res) => {
-    console.log('income token: ', req.body.token);
     const token = req.body.token;
+    console.log('income token: ', token);
     const tokenValidates = speakeasy.totp.verify({
         secret: secret.base32,
         encoding: 'base32',
